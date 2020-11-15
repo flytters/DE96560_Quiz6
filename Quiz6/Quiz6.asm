@@ -10,7 +10,7 @@ LOOP_CNT1		SET	0x01
 				org	0x18
 				retfie
 			
-dup_nop			macro hh
+dup_nop				macro hh
 				variable	i
 i	=	0
 				while	i	<	hh
@@ -23,9 +23,9 @@ i	+=	1
 ;MAIN PROGRAM
 ;###################################################
 
-start			CLRF	TRISD,A
+start				CLRF	TRISD,A
 
-loop			CALL	perform6
+loop				CALL	perform6
 				CALL	DELAY60ms
 
 				CALL	perform5
